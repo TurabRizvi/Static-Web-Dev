@@ -19,18 +19,6 @@
 
 ---
 
-## 📌 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Pages](#-pages)
-- [Car Models](#-car-models)
-- [Customization Engine](#-customization-engine)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Design Highlights](#-design-highlights)
-
----
 
 ## 🌟 Overview
 
