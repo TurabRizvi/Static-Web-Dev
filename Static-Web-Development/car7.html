@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche 912 - Luxury Motorsports</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="images/912f.png" class="slide" alt="Porsche 912 Front">
+        <img src="images/912s.png" class="slide" alt="Porsche 912 Side">
+        <img src="images/912b.png" class="slide" alt="Porsche 912 Back">
+      </div>
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="details">
+      <h1>Porsche 912</h1>
+      <h2>$95,000</h2>
+      <p class="tagline">Balanced performance with classic style.</p>
+      <p class="description">
+        The Porsche 912 is a legendary sports car that delivered the iconic 911 silhouette with a lighter, more agile package. Produced in the late 1960s, it offered a four-cylinder alternative that didn’t compromise the Porsche driving experience. A symbol of purist driving and timeless design.
+      </p>
+      <div class="specs">
+        <div><strong>Engine:</strong> 1.6L Flat-4</div>
+        <div><strong>Horsepower:</strong> 90 hp</div>
+        <div><strong>0–60 mph:</strong> 11.6 sec</div>
+        <div><strong>Top Speed:</strong> 115 mph</div>
+        <div><strong>Transmission:</strong> 5-speed Manual</div>
+        <div><strong>Drivetrain:</strong> RWD</div>
+      </div>
+      <button class="cta">Buy now</button>
+      <a href="models.html" class="back-link">&larr; Back to Models</a>
+    </section>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    showSlide(slideIndex);
+  </script>
+</body>
+</html>

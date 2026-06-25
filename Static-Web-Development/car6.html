@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche 901 Prototype - Luxury Motorsports</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="images/901f.png" class="slide" alt="Porsche 901 Prototype Front">
+        <img src="images/901s.png" class="slide" alt="Porsche 901 Prototype Side">
+        <img src="images/901B.png" class="slide" alt="Porsche 901 Prototype Back">
+      </div>
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="details">
+      <h1>Porsche 901 Prototype</h1>
+      <h2>$2,100,000</h2>
+      <p class="tagline">The origin of an icon.</p>
+      <p class="description">
+        The Porsche 901 prototype is the historic predecessor to the world-renowned 911. Introduced in the early 1960s, it laid the foundation for Porsche’s most enduring sports car lineage. With its pure lines, minimalist form, and unmistakable silhouette, the 901 represents the genesis of Porsche's rear-engine legend.
+      </p>
+      <div class="specs">
+        <div><strong>Engine:</strong> 2.0L Flat-6</div>
+        <div><strong>Horsepower:</strong> 130 hp</div>
+        <div><strong>0–60 mph:</strong> 8.5 sec</div>
+        <div><strong>Top Speed:</strong> 131 mph</div>
+        <div><strong>Transmission:</strong> 5-speed Manual</div>
+        <div><strong>Drivetrain:</strong> RWD</div>
+      </div>
+      <button class="cta">Buy now</button>
+      <a href="models.html" class="back-link">&larr; Back to Models</a>
+    </section>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize
+    showSlide(slideIndex);
+  </script>
+</body>
+</html>

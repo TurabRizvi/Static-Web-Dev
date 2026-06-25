@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Porsche 911</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="customize-page">
+    <h1>Customize Your Porsche 911</h1>
+
+    <section class="image-section">
+      <img id="car-image" src="images/combo1.jpg" alt="Customized Porsche 911" />
+    </section>
+
+    <form class="customize-form" oninput="updateImage()">
+      <label for="rim">Select Rim:</label>
+      <select id="rim">
+        <option value="Classic Alloy">Classic Alloy</option>
+        <option value="RS Spyder">RS Spyder</option>
+      </select>
+
+      <label for="bodykit">Select Body Kit:</label>
+      <select id="bodykit">
+        <option value="Standard">Standard</option>
+        <option value="Widebody">Widebody</option>
+      </select>
+
+      <label for="spoiler">Select Spoiler:</label>
+      <select id="spoiler">
+        <option value="Ducktail">Ducktail</option>
+        <option value="GT Wing">GT Wing</option>
+      </select>
+
+      <button type="submit" class="cta">Confirm Customization</button>
+    </form>
+
+    <a href="models.html" class="back-link">&larr; Back to Models</a>
+  </main>
+
+  <script>
+    function updateImage() {
+      const rim = document.getElementById('rim').value;
+      const kit = document.getElementById('bodykit').value;
+      const spoiler = document.getElementById('spoiler').value;
+
+      // Mapping part combinations to combo image filenames
+      const comboMap = {
+        "Classic Alloy_Standard_Ducktail": "combo1.jpg",
+        "Classic Alloy_Widebody_GT Wing": "combo2.jpg",
+        "RS Spyder_Standard_GT Wing": "combo3.jpg",
+        "RS Spyder_Widebody_Ducktail": "combo4.jpg",
+        "Classic Alloy_Standard_Ducktail": "combo5.jpg", // same as 1
+        "Classic Alloy_Widebody_GT Wing": "combo6.jpg", // same as 2
+        "RS Spyder_Standard_GT Wing": "combo7.jpg", // same as 3
+        "RS Spyder_Widebody_Ducktail": "combo8.jpg"  // same as 4
+      };
+
+      const key = `${rim}_${kit}_${spoiler}`;
+      const imageFile = comboMap[key] || "combo1.jpg"; // fallback
+
+      document.getElementById('car-image').src = `images/${imageFile}`;
+    }
+  </script>
+</body>
+</html>

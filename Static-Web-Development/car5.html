@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche 550 Spyder - Luxury Motorsports</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="images/550f.png" class="slide" alt="Porsche 550 Spyder Front">
+        <img src="images/555b.png" class="slide" alt="Porsche 550 Spyder Back">
+        <img src="images/550i.png" class="slide" alt="Porsche 550 Spyder Interior View">
+      </div>
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="details">
+      <h1>Porsche 550 Spyder</h1>
+      <h2>$6,000,000</h2>
+      <p class="tagline">Lightweight. Legendary. Born to race.</p>
+      <p class="description">
+        The Porsche 550 Spyder is one of the most iconic sports cars ever made. With its minimalist design, nimble handling, and impressive racing pedigree, the 550 Spyder remains a symbol of pure driving passion.
+      </p>
+      <div class="specs">
+        <div><strong>Engine:</strong> 1.5L Flat-4</div>
+        <div><strong>Horsepower:</strong> 110 hp</div>
+        <div><strong>0–60 mph:</strong> 7.1 sec</div>
+        <div><strong>Top Speed:</strong> 137 mph</div>
+        <div><strong>Transmission:</strong> 4-speed Manual</div>
+        <div><strong>Drivetrain:</strong> RWD</div>
+      </div>
+      <button class="cta">Buy now</button>
+      <a href="models.html" class="back-link">&larr; Back to Models</a>
+    </section>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize
+    showSlide(slideIndex);
+  </script>
+</body>
+</html>

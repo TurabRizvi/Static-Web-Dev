@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Motorsports - Intro</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 1000px;
+    }
+
+    .logo {
+      width: 400px;
+      height: 400px;
+      animation: spin3D 4s linear infinite;
+      transform-style: preserve-3d;
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    }
+
+    @keyframes spin3D {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    .btn {
+      margin-top: 50px;
+      padding: 14px 36px;
+      font-size: 18px;
+      font-weight: 600;
+      background: linear-gradient(to bottom, #f5c518, #d4a20f);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 0 0 rgba(0,0,0,0.2), 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .btn:hover {
+      background: linear-gradient(to bottom, #e6b716, #b88f08);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <img src="Images/logo.png" alt="Porsche Logo" class="logo" />
+  <button class="btn" onclick="location.href='index.html'">Continue to Website</button>
+</body>
+</html>

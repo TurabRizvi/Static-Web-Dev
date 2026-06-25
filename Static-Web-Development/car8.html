@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porsche 911 Variants - Luxury Motorsports</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="variant">
+      <label for="variant-select">Choose Variant:</label>
+      <select id="variant-select" class="variant-select" onchange="changeVariant()">
+        <option value="gt3">911 GT3 RS</option>
+        <option value="gt2">911 GT2 RS</option>
+        <option value="turbo">911 Turbo S</option>
+      </select>
+    </section>
+
+    <section class="image-container">
+      <img id="variant-image" src="images/911gt3.png" alt="Variant Image" />
+    </section>
+
+    <section class="details">
+      <h1 id="car-title">Porsche 911 GT3 RS</h1>
+      <h2 id="car-price">$223,800</h2>
+      <p class="tagline" id="car-tagline">Track-ready beast with everyday usability.</p>
+      <p class="description" id="car-description">
+        The GT3 RS is precision-engineered for race performance, with aggressive aerodynamics and a naturally aspirated 4.0L flat-six. It's designed for those who crave the rawest 911 experience possible.
+      </p>
+      <div class="specs" id="car-specs">
+        <div><strong>Engine:</strong> 4.0L Flat-6</div>
+        <div><strong>Horsepower:</strong> 518 hp</div>
+        <div><strong>0–60 mph:</strong> 3.0 sec</div>
+        <div><strong>Top Speed:</strong> 184 mph</div>
+        <div><strong>Transmission:</strong> 7-speed PDK</div>
+        <div><strong>Drivetrain:</strong> RWD</div>
+      </div>
+      <a href="customize.html?variant=gt3" class="cta" id="customize-link">Customize</a>
+      <a href="models.html" class="back-link"> Back to Models</a>
+    </section>
+  </main>
+
+  <script>
+    const variantData = {
+      gt3: {
+        image: 'images/911gt3.png',
+        title: 'Porsche 911 GT3 RS',
+        price: '$223,800',
+        tagline: 'Track-ready beast with everyday usability.',
+        description: 'The GT3 RS is precision-engineered for race performance, with aggressive aerodynamics and a naturally aspirated 4.0L flat-six. It\'s designed for those who crave the rawest 911 experience possible.',
+        specs: [
+          '4.0L Flat-6', '518 hp', '3.0 sec', '184 mph', '7-speed PDK', 'RWD'
+        ]
+      },
+      gt2: {
+        image: 'images/911gt2.png',
+        title: 'Porsche 911 GT2 RS',
+        price: '$293,200',
+        tagline: 'The most powerful 911 ever built.',
+        description: 'The GT2 RS features a 3.8L twin-turbo flat-six producing 700 hp. With lightweight materials and advanced aerodynamics, it offers blistering performance and track dominance.',
+        specs: [
+          '3.8L Twin-Turbo Flat-6', '700 hp', '2.7 sec', '211 mph', '7-speed PDK', 'RWD'
+        ]
+      },
+      turbo: {
+        image: 'images/911turbos.png',
+        title: 'Porsche 911 Turbo S',
+        price: '$230,400',
+        tagline: 'Luxury meets explosive acceleration.',
+        description: 'Blending comfort and speed, the Turbo S delivers 640 hp with AWD and luxury refinements, making it the most balanced high-performance 911.',
+        specs: [
+          '3.7L Twin-Turbo Flat-6', '640 hp', '2.6 sec', '205 mph', '8-speed PDK', 'AWD'
+        ]
+      }
+    };
+
+    function changeVariant() {
+      const selected = document.getElementById("variant-select").value;
+      const data = variantData[selected];
+
+      document.getElementById("variant-image").src = data.image;
+      document.getElementById("car-title").innerText = data.title;
+      document.getElementById("car-price").innerText = data.price;
+      document.getElementById("car-tagline").innerText = data.tagline;
+      document.getElementById("car-description").innerText = data.description;
+
+      const specHTML = [
+        `<div><strong>Engine:</strong> ${data.specs[0]}</div>`,
+        `<div><strong>Horsepower:</strong> ${data.specs[1]}</div>`,
+        `<div><strong>0–60 mph:</strong> ${data.specs[2]}</div>`,
+        `<div><strong>Top Speed:</strong> ${data.specs[3]}</div>`,
+        `<div><strong>Transmission:</strong> ${data.specs[4]}</div>`,
+        `<div><strong>Drivetrain:</strong> ${data.specs[5]}</div>`
+      ].join("");
+
+      document.getElementById("car-specs").innerHTML = specHTML;
+      document.getElementById("customize-link").href = `customize.html?variant=${selected}`;
+    }
+
+    // Initialize
+    changeVariant();
+  </script>
+</body>
+</html>
