@@ -20,7 +20,7 @@
 ---
 
 
-## 🌟 Overview
+##  Overview
 
 **Luxury Motorsports** is a fully static, multi-page website that simulates a high-end Porsche dealership experience. Built entirely with HTML, CSS, and vanilla JavaScript — no frameworks, no libraries — it showcases clean front-end development with interactive features, responsive layout, and a polished visual identity.
 
@@ -28,17 +28,17 @@ The site goes beyond a simple landing page: it features a working car configurat
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Detail |
 |---|---|
-| 🚗 Car Catalog | 10 Porsche models with individual detail pages |
-| ⚡ Dynamic Variant Switcher | Switch between 911 GT3 RS, GT2 RS, and Turbo S — specs update live |
-| 🎨 Car Configurator | Choose rims, body kit & spoiler — preview image updates in real time |
-| 📱 Responsive Design | Optimized for desktop and mobile viewports |
-| 🖼️ Hero Sections | Full-width visual hero on homepage, models, and about pages |
-| 📬 Contact Form | Name, email, and message fields with showroom details |
-| 🧭 Consistent Navigation | Shared nav across all pages with active state highlighting |
+|  Car Catalog | 10 Porsche models with individual detail pages |
+|  Dynamic Variant Switcher | Switch between 911 GT3 RS, GT2 RS, and Turbo S — specs update live |
+|  Car Configurator | Choose rims, body kit & spoiler — preview image updates in real time |
+|  Responsive Design | Optimized for desktop and mobile viewports |
+|  Hero Sections | Full-width visual hero on homepage, models, and about pages |
+|  Contact Form | Name, email, and message fields with showroom details |
+|  Consistent Navigation | Shared nav across all pages with active state highlighting |
 
 ---
 
@@ -46,13 +46,13 @@ The site goes beyond a simple landing page: it features a working car configurat
 
 | Page | File | Description |
 |---|---|---|
-| 🏠 Home | `Index.html` | Hero, featured cars gallery, welcome section, about snippet |
-| 🚘 Models | `models.html` | Full Porsche catalog with customization-available labels |
-| 🔍 911 Variants | `car8.html` | Dynamic switcher for GT3 RS, GT2 RS & Turbo S |
-| 🔧 Customize | `customize.html` | Live car configurator with combo image preview |
-| ℹ️ About | `about.html` | Mission, vision, and story sections |
-| 📞 Contact | `contact.html` | Contact form + showroom address & phone |
-| 🏎️ Model Pages | `car1–car7.html` | Individual detail pages for each Porsche model |
+|  Home | `Index.html` | Hero, featured cars gallery, welcome section, about snippet |
+|  Models | `models.html` | Full Porsche catalog with customization-available labels |
+|  911 Variants | `car8.html` | Dynamic switcher for GT3 RS, GT2 RS & Turbo S |
+|  Customize | `customize.html` | Live car configurator with combo image preview |
+|  About | `about.html` | Mission, vision, and story sections |
+|  Contact | `contact.html` | Contact form + showroom address & phone |
+|  Model Pages | `car1–car7.html` | Individual detail pages for each Porsche model |
 
 ---
 
@@ -73,21 +73,21 @@ The site goes beyond a simple landing page: it features a working car configurat
 
 ---
 
-## 🎨 Customization Engine
+##  Customization Engine
 
 The `customize.html` page features a live car configurator. Every combination of options maps to a unique preview image — updated instantly with JavaScript, no page reload.
 
 | Option | Choices |
 |---|---|
-| 🔩 Rim | Classic Alloy / RS Spyder |
-| 🚙 Body Kit | Standard / Widebody |
-| 💨 Spoiler | Ducktail / GT Wing |
+|  Rim | Classic Alloy / RS Spyder |
+|  Body Kit | Standard / Widebody |
+|  Spoiler | Ducktail / GT Wing |
 
 Each of the 8 possible combinations maps to a unique combo image (`combo1.jpg` – `combo8.jpg`).
 
 ---
 
-## 🏎️ 911 Variant Switcher
+##  911 Variant Switcher
 
 The flagship detail page (`car8.html`) dynamically updates all content when the user selects a variant from the dropdown — no page reload, pure JavaScript.
 
@@ -115,7 +115,7 @@ The flagship detail page (`car8.html`) dynamically updates all content when the 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Luxury-Motorsports/
@@ -144,7 +144,7 @@ Luxury-Motorsports/
 
 ---
 
-## 🎨 Design Highlights
+##  Design Highlights
 
 - **Hero Sections** — Full-width image banners with centered headline and CTA button on the homepage and models page
 - **Card Grid Layout** — CSS grid-based car cards that are clickable and navigate to detail pages
@@ -152,16 +152,6 @@ Luxury-Motorsports/
 - **Customization Labels** — "Customization Available" badge overlaid on the three flagship 911 cards
 - **Mobile-Responsive** — Viewport meta tag and fluid layouts ensure the site works across screen sizes
 - **Consistent Footer** — Copyright footer present on all pages
-
----
-
-## 📬 Contact & Showroom
-
-| Detail | Info |
-|---|---|
-| 📍 Address | 123 Carrera Lane, Speed City, CA |
-| 📧 Email | support@luxurymotorsports.com |
-| 📞 Phone | +92-333-555-2134 |
 
 ---
 
